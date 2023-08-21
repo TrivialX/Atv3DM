@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     gap: 12,
-    top: getStatusBarHeight() - 64,
+    top: getStatusBarHeight() - 30,
   },
   containerDiv: {
     alignItems: "center",

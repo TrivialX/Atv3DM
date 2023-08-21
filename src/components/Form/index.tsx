@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput, View, Text } from "react-native";
 
-import { styles } from "./Entradas/styles";
+import { styles } from "./Entradas/css";
 
 interface FormInputProps {
   text: string;
