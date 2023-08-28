@@ -1,35 +1,25 @@
+import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
-import { Form } from "./src/components/Form/Entradas";
+import { View, Button } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Form } from "./src/components/Form/CalcMedia";
+import Contador from "./src/components/Form/Contador"; 
+import HomeScreen from "./src/components/Form/Home";
+import ColorList from "./src/components/Form/ColorSort";
 
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_500Medium,
-} from "@expo-google-fonts/inter";
-import AppLoading from "expo-app-loading";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
   return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: '#E6F7FF',
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <StatusBar style="light" backgroundColor="transparent" translucent />
-      <Form />
-    </View>
+    <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Calcular Media" component={Form} />
+          <Stack.Screen name="Contador" component={Contador} />
+          <Stack.Screen name="ColorList" component={ColorList} />
+        </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
