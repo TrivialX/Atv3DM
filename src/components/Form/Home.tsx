@@ -19,6 +19,12 @@ function HomeScreen({ navigation }: { navigation: any }) {
             <Text style={styles.buttonText}>ColorList</Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={() => navigation.navigate('RandomImage')}
+            style={styles.buttonContainer}
+          >
+            <Text style={styles.buttonText}>RandomImage</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
             onPress={() => navigation.navigate('Calcular Media')}
             style={styles.buttonContainer}
           >

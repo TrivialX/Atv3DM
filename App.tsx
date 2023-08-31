@@ -7,6 +7,7 @@ import { Form } from "./src/components/Form/CalcMedia";
 import Contador from "./src/components/Form/Contador"; 
 import HomeScreen from "./src/components/Form/Home";
 import ColorList from "./src/components/Form/ColorSort";
+import RandomImage from "./src/components/Form/RandomImage";
 
 
 const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Calcular Media" component={Form} />
           <Stack.Screen name="Contador" component={Contador} />
+          <Stack.Screen name="RandomImage" component={RandomImage} />
           <Stack.Screen name="ColorList" component={ColorList} />
         </Stack.Navigator>
     </NavigationContainer>
