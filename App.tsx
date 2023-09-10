@@ -8,6 +8,7 @@ import Contador from "./src/components/Form/Contador";
 import HomeScreen from "./src/components/Form/Home";
 import ColorList from "./src/components/Form/ColorSort";
 import RandomImage from "./src/components/Form/RandomImage";
+import ConsuAPI from "./src/components/Form/ConsuAPI";
 
 
 const Stack = createStackNavigator();
@@ -21,6 +22,7 @@ export default function App() {
           <Stack.Screen name="Contador" component={Contador} />
           <Stack.Screen name="RandomImage" component={RandomImage} />
           <Stack.Screen name="ColorList" component={ColorList} />
+          <Stack.Screen name="ConsuAPI" component={ConsuAPI} />
         </Stack.Navigator>
     </NavigationContainer>
   );

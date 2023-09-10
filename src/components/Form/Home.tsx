@@ -30,6 +30,12 @@ function HomeScreen({ navigation }: { navigation: any }) {
           >
             <Text style={styles.buttonText}>Calcular Média</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ConsuAPI')}
+            style={styles.buttonContainer}
+          >
+            <Text style={styles.buttonText}>ConsuAPI</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

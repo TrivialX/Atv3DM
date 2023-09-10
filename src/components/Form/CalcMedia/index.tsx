@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, View, TextInput, Button } from "react-native";
+import { Text, View, TextInput, Button, Vibration } from "react-native";
 import { styles } from "./css";
 
 interface FormInputProps {
@@ -31,6 +31,7 @@ export function Form() {
 
   useEffect(() => {
     if (!isNaN(num1) && !isNaN(num2)) {
+      Vibration.vibrate();
       const calcM = (num1 + num2) / 2;
       setMed(`Média: ${calcM.toFixed(2)}`);
     } else {
